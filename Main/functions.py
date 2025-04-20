@@ -1,3 +1,5 @@
+#Calculates Score Based on Word (Used for deugging, currently commented out of main.py)
+#When debugging, it will output the total score of a given word.
 def calculateScore(word):
 
     scoreMapping = {

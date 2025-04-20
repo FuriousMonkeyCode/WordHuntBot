@@ -1,10 +1,10 @@
 from classes import *
 from Main.functions import*
 
-# New WordHunt game Instance
+# New Word Hunt game Instance
 Game = WordHuntInstance()
 
-# Get user input from Wordhunt game and sets up the board
+# Get user input from Word Hunt game and sets up the board
 letters = [*input("letters:").upper()]
 Game.setBoard(*letters)
 
@@ -24,8 +24,8 @@ boardSize = 4
 for y in range(boardSize):
     for x in range(boardSize):
 
-        nodeQueue = QueueFrontier() # Creates a Queue Frontier *DO LATER*
-        startingCell = (x,y) # Sets starting cel to current cell
+        nodeQueue = QueueFrontier() # Creates a Queue Frontier
+        startingCell = (x,y) # Sets starting cell to current cell
 
         # Sets up the starting node for the search
         ParentNode = Node(Game.gameBoard,Game.gameBoard[y][x],startingCell,[[X==x and Y==y for X in range(boardSize)]for Y in range(boardSize)],None,(0,0),(x,y))
